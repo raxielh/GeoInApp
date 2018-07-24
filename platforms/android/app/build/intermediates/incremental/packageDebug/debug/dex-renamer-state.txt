@@ -1,0 +1,4 @@
+#Mon Jul 16 15:29:55 COT 2018
+base.0=D\:\\Documentos\\GitHub\\XplorateEstudianteApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=D\:\\Documentos\\GitHub\\XplorateEstudianteApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

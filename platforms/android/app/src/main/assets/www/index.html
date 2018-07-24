@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>App</title>
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/container.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/header.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/image.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/button.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/list.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/transition.css">
+
+		<link rel="stylesheet" type="text/css" href="revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="revolution/fonts/font-awesome/css/font-awesome.min.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+		
+		<link rel="stylesheet" type="text/css" href="assets/css/noneed.css">
+
+	  <script src="Js/jquery.js"></script>
+		
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+			(Load Extensions only on Local File Systems !  
+			The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+
+  </style>
+
+
+  <script src="Semantic-UI-CSS/components/visibility.js"></script>
+  <script src="Semantic-UI-CSS/components/sidebar.js"></script>
+  <script src="Semantic-UI-CSS/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body class="pushable">
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical center aligned segment">
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        <img src="img/logo.png" alt="" style="width: 200px" width="200px">
+      </h1>
+    </div>
+
+  </div>
+
+
+<div class="ui fluid three item menu"  style="margin: 0px">
+  <a class="item" href="index.html">    <i class="home icon"></i>
+    Inicio</a>
+  <a class="item" href="login.html">    <i class="lock open icon"></i>
+    Test</a>
+  <a class="item" href="registrarse.html">    <i class="address card icon"></i>
+    FAQ</a>
+</div>
+
+	<section class="example">
+			<article class="content">
+				<div id="rev_slider_2_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classic-carousel2" style="margin:0px auto;background-color:#ffffff;padding:0px;margin-top:0px;margin-bottom:0px;">
+				
+					<!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+					<div id="rev_slider_2_1" class="rev_slider fullwidthabanner">
+						<ul>
+							<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+								<img src="res/fd01.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="200"
+									data-y="75" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="700"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e2.png" alt="">
+								</div>
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="300"
+									data-y="25" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e1.png" alt="">
+								</div>
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="-280"
+									data-y="55" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e7.png" alt="">
+								</div>
+								
+
+
+
+							</li>
+							<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+								<img src="res/fd01.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="200"
+									data-y="75" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="700"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e3.png" alt="">
+								</div>						
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="420"
+									data-y="20" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e4.png" alt="">
+								</div>	
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="415"
+									data-y="142" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e5.png" alt="">
+								</div>	
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="420"
+									data-y="341" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e6.png" alt="">
+								</div>	
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="-280"
+									data-y="55" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e8.png" alt="">
+								</div>
+
+
+
+
+
+							</li>
+							<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+								<img src="res/fd02.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="-310"
+									data-y="10" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="700"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/o0.png" alt="">
+								</div>						
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="-280"
+									data-y="35" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/o1.png" alt="">
+								</div>	
+								<div class="tp-caption customin customout"
+									data-x="center" data-hoffset="280"
+									data-y="75" data-voffset="0"
+									data-customin="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;"
+									data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+									data-speed="800"
+									data-start="900"
+									data-easing="Power4.easeOut"
+									data-endspeed="500"
+									data-endeasing="Power4.easeIn"
+									style="z-index: 3">
+									<img src="res/e9.png" alt="">
+								</div>
+
+							</li>
+
+			</ul>
+						<div class="tp-static-layers"></div>
+						<div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);"></div>	
+					</div>
+				</div><!-- END REVOLUTION SLIDER -->
+				<script type="text/javascript">
+						var tpj=jQuery;
+			
+					var revapi2;
+					tpj(document).ready(function() {
+						if(tpj("#rev_slider_2_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_2_1");
+						}else{
+							revapi2 = tpj("#rev_slider_2_1").show().revolution({
+								jsFileLocation:"revolution/js/",
+								sliderType:"standard",
+								sliderLayout:"fullwidth",
+								dottedOverlay:"none",
+								delay:3000,
+								navigation: {
+									arrows:{enable:true},
+	                                bullets: {
+	                                    enable: true,
+	                                    hide_onmobile: false,
+	                                    style: "hephaistos",
+	                                    hide_onleave: false,
+	                                    direction: "horizontal",
+	                                    h_align: "center",
+	                                    v_align: "bottom",
+	                                    h_offset: 0,
+	                                    v_offset: 0,
+	                                    space: 5,
+	                                    tmp: ''
+	                                }			
+								},	
+								viewPort: {
+									enable:true,
+									outof:"pause",
+									visible_area:"100%"
+								},
+							});
+						}
+					});	/*ready*/
+				</script>		
+			</article>
+	</section>	
+
+  <div class="ui vertical stripe segment" style="padding: 2em 0em;">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+          <p style="text-align: center;padding: 2em">Bienvenido a Xplorate, una herramienta que te permitirá conocerte mejor. Se trata de un test, en el que encuentras preguntas acerca de ti. El test te proporcionará información valiosa para mejorar tu vida. Al terminar el test, recibirás retroalimentación acerca de tus niveles de bienestar en las siguientes 5 dimensiones.</p>
+      </div>
+    </div>
+  </div>
+
+<section class="Physical global nth" style="
+			background-image: url(img/01.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;">
+	    <div class="content" style="background: rgba(0, 0, 0, 0.6);">
+	        <div class="physicalInt">
+	            <div class="cont-text" style="padding: 4em">
+	                <h2 style="color:#fff">EMOCIONAL</h2>
+	                <p style="color:#fff">La dimensión emocional trata sobre la salud mental. ¿Con qué frecuencia siente emociones positivas y negativas? ¿Siente que es optimista y se siente feliz con la vida, o encuentra que todos los días es una lucha, llena de ansiedad, tristeza, o con otras emociones que le dificultan desempeñarse? La salud Emocional involucra sentirse bien y funcionar bien todos los días, con un sentimiento general de satisfacción con la vida.</p>
+	            </div>
+	        </div>
+	    </div>
+</section>
+
+<section class="Physical global nth" style="
+			background-image: url(img/02.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;">
+	    <div class="content" style="background: rgba(0, 0, 0, 0.6);">
+	        <div class="physicalInt">
+	            <div class="cont-text" style="padding: 4em">
+	                <h2 style="color:#fff">FINANCIERO</h2>
+	                <p style="color:#fff">¿Tiene el dinero necesario para suplir sus necesidades cotidianas, o encuentra que vive de sueldo en sueldo, escasamente sobreviviendo? La dimensión financiera se refiere al grado en el cual se cuenta con los recursos necesarios para vivir lo que se quiere vivir, y el grado con el cual se está invirtiendo en el porvenir versus tratar de sortear las deudas y tener suficiente dinero para sobrevivir. Ser capaz de suplir las necesidades es un cimiento importante para construir el bienestar.</p>
+	            </div>
+	        </div>
+	    </div>
+</section>
+
+<section class="Physical global nth" style="
+			background-image: url(img/03.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;">
+	    <div class="content" style="background: rgba(0, 0, 0, 0.6);">
+	        <div class="physicalInt">
+	            <div class="cont-text" style="padding: 4em">
+	                <h2 style="color:#fff">SOCIAL</h2>
+	                <p style="color:#fff">La dimensión social se refiere a la calidad de relaciones interpersonales que sostenemos. ¿Se siente cercano(a) a otros o se siente solitario(a), inclusive cuando está rodeado(a) de muchas personas? ¿Tiene quién lo (la) apoye cuando lo necesite? ¿Le brinda usted apoyo a los que lo rodean (la rodean)? No se trata de cuántas personas conoce, sino qué tanto se siente conectado(a) con los demás.</p>
+	            </div>
+	        </div>
+	    </div>
+</section>
+
+<section class="Physical global nth" style="
+			background-image: url(img/04.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;">
+	    <div class="content" style="background: rgba(0, 0, 0, 0.6);">
+	        <div class="physicalInt">
+	            <div class="cont-text" style="padding: 4em">
+	                <h2 style="color:#fff">FÍSICO</h2>
+	                <p style="color:#fff">¿Cómo se siente físicamente? La dimensión física se refiere al estado de la salud – tanto objetiva como subjetivamente. ¿Es por lo general saludable o con frecuencia se enferma? ¿Se siente energético(a), en buen estado físico, y con fuerzas, o siente que lucha para lograr realizar las labores diarias que desea o necesita ejecutar? Gozar de un estado saludable le provee los cimientos para una buena salud mental.</p>
+	            </div>
+	        </div>
+	    </div>
+</section>
+
+<section class="Physical global nth" style="
+			background-image: url(img/05.jpg) ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;">
+	    <div class="content" style="background: rgba(0, 0, 0, 0.6);">
+	        <div class="physicalInt">
+	            <div class="cont-text" style="padding: 4em">
+	                <h2 style="color:#fff">SIGNIFICADO Y PROPÓSITO</h2>
+	                <p style="color:#fff">¿Con qué meta se levanta de la cama cada día? ¿Tiene un sentido de dirección y propósito, o le parece que los días sólo pasan y pasan? Como seres humanos tenemos una fuerte necesidad de sentir que tenemos propósito y significado [en la vida]. Queremos que la vida tenga sentido. Tenemos aspiraciones a largo plazo que se alinean con nuestros valores más íntimos [más medulares] y ellos nos brinda un sentido de dirección. Nos sentimos conectados a lo exterior, y sabemos cómo encajamos en el engranaje del mundo.</p>
+	            </div>
+	        </div>
+	    </div>
+</section>
+
+  <div class="ui inverted vertical footer">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="seven wide column">
+          <p>© Xplorate - Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

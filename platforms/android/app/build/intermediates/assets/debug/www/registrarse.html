@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>App</title>
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/container.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/header.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/image.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/button.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/list.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS/components/transition.css">
+
+		<link rel="stylesheet" type="text/css" href="revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+		<link rel="stylesheet" type="text/css" href="revolution/fonts/font-awesome/css/font-awesome.min.css">
+		
+		<!-- REVOLUTION STYLE SHEETS -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+		<!-- REVOLUTION LAYERS STYLES -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+		<!-- REVOLUTION NAVIGATION STYLES -->
+		<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+		
+		<link rel="stylesheet" type="text/css" href="assets/css/noneed.css">
+
+	  <script src="Js/jquery.js"></script>
+		
+		<!-- REVOLUTION JS FILES -->
+		<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+		<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+			(Load Extensions only on Local File Systems !  
+			The following part can be removed on Server for On Demand Loading) -->	
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <style type="text/css">
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+    .ui.vertical.stripe .button + h3,
+    .ui.vertical.stripe p + h3 {
+      margin-top: 3em;
+    }
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+
+body.pushable > .pusher {
+    background: #F9F9F9;
+}
+h3{ margin-top:0.5em !important  }
+  </style>
+
+
+  <script src="Semantic-UI-CSS/components/visibility.js"></script>
+  <script src="Semantic-UI-CSS/components/sidebar.js"></script>
+  <script src="Semantic-UI-CSS/components/transition.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix menu when passed
+      $('.masthead')
+        .visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        })
+      ;
+
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+        .sidebar('attach events', '.toc.item')
+      ;
+
+    })
+  ;
+  </script>
+</head>
+<body class="pushable">
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical center aligned segment">
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        <img src="img/logo.png" alt="" style="width: 200px" width="200px">
+      </h1>
+    </div>
+
+  </div>
+
+
+<div class="ui fluid three item menu"  style="margin: 0px">
+  <a class="item" href="index.html">    <i class="home icon"></i>
+    Inicio</a>
+  <a class="item" href="login.html">    <i class="lock open icon"></i>
+    Test</a>
+  <a class="item" href="registrarse.html">    <i class="address card icon"></i>
+    FAQ</a>
+</div>
+
+  <div class="ui vertical stripe segment" style="padding: 2em 0em;">
+    <div class="ui middle aligned stackable grid container">
+      <div class="row">
+<h1  class="ui header">PREGUNTAS FRECUENTES</h1>
+<h3  class="ui">Donde encuentro el test ?</h3>
+
+<p>R:/ En el menu superior hay boton que se llama test presionalo.</p>
+
+<h3  class="ui">Como me registro en el test ?</h3>
+
+<p>R:/ En el menu superior hay boton que se llama test presionalo luego das clic en un boton verde que dice registrarse llena tus datos y presiona registrarse.</p>
+
+<h3 class="ui">Como inicio sesion en el test ?</h3>
+
+<p>R:/ En el menu superior hay boton que se llama test presionalo luego das clic en un boton verde que dice registrarse llena tus datos y presiona registrarse ó si ya hiciste ese proceso digita tus datos de documeto y contraseña en el campo que lo pide y presiona entrar
+</p>
+<h3  class="ui">Como inicio en el test ?</h3>
+
+<p>R:/ Digita tus datos de documeto y contraseña en el campo que lo pide y presiona entrar y veras un boton circular que dice test presionalo y da le clic en comenzar
+</p>
+<h3  class="ui">Como veo los resultados del test ?</h3>
+
+<p>R:/ Digita tus datos de documeto y contraseña en el campo que lo pide y presiona entrar y veras un boton circular que dice Mi analisis presionalo y vera los resultados del test
+</p>
+<h3  class="ui">Como veo los resultados anteriores del test ?</h3>
+
+<p>R:/ Digita tus datos de documeto y contraseña en el campo que lo pide y presiona entrar y veras un boton circular que dice Mi analisis presionalo y vera los resultados actuales del test presiona un campo que dice elija y seleciona la fecha que quieres recordar tu analisis y dale cilc en ver</p>
+
+<h3  class="ui">Como veo los resultados historicos del test ?</h3>
+
+<p>R:/ Digita tus datos de documeto y contraseña en el campo que lo pide y presiona entrar y veras un boton circular que dice Mi analisis presionalo y vera los resultados actuales del test presiona un boton azul que dice grafico historico y veras una grafica de tus resultados en el tiempo
+
+</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui inverted vertical footer">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="seven wide column">
+          <p>© Xplorate - Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

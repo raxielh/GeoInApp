@@ -1,1 +1,1 @@
-# GeoInApp
+# XplorateEstudianteApp
