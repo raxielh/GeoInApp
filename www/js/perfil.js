@@ -16,6 +16,8 @@ $(function()
 
 function cargar(){
   //var userId = firebase.auth().currentUser.uid;
+  $('#fondo_load').show();
+  $('#load').show();
   firebase.auth().onAuthStateChanged(function(user) {
   
   if (user) {
@@ -31,7 +33,11 @@ function cargar(){
           $('#apellidos').val(obj[key].apellidos);
           $('#telefono').val(obj[key].telefono);
 
+
         });
+
+          $('#fondo_load').hide();
+          $('#load').hide();
 
       });
     }
