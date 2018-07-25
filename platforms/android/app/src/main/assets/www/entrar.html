@@ -9,15 +9,18 @@
     <title>GeoIn!</title>
   </head>
   <body>
+    <div id="fondo_load">
+      <div id="load"><img src="./img/load.gif" alt="" width="100%"></div>
+    </div>
     <div class="icono">
       <img src="img/icono_color.png" alt="">
     </div>
     <div class="form">
       <div class="form-group">
-        <input type="text" class="form-control" id="user" placeholder="Correo" value="rodrigo@gmail.com">
+        <input type="text" class="form-control" id="user" placeholder="Correo" value="">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" id="pass" placeholder="Contraseña" value="123456">
+        <input type="password" class="form-control" id="pass" placeholder="Contraseña" value="">
       </div>
       <a href="#" class="btn ingresar">Ingresar</a>
       <div class="alert alert-danger" role="alert" id="error_msg" style="margin-top: 1em"></div>
@@ -49,6 +52,14 @@
       $(function()
       {
         $("body").fadeIn(2000);
+      });
+    </script>
+    <script src="./js/bind.polyfill.js"></script>
+    <script src="./js/Tocca.js"></script>
+    <script>
+      //swiperight,swipeleft
+      $("html").on('swiperight',function (e,data){
+        location.href ="index.html";
       });
     </script>
   </body>

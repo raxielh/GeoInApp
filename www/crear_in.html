@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="./css/crear_in.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
     <title>GeoIn!</title>
+    <style>
+      .form-control{
+            background-color: #fff0;
+      }
+      #map {
+        height: 200px;
+        display: none;
+      }
+      #info {
+        display: none;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    </style>
   </head>
   <body id="gesuredZone">
     <header>
@@ -46,9 +64,75 @@
 
       <form action="">
         <div class="form-group">
+          <select name="barrio" id="barrio" class="form-control" >
+            <option value="">Barrio</option>
+            <option value="Buenavista">Buenavista</option>
+            <option value="Centro">Centro</option>
+          </select>
           <input type="text" class="form-control" id="dire" placeholder="Dirección">
+          <div class="row">
+            <div class="col-6 col-sm-5">
+              <input type="number" class="form-control" id="estrato" placeholder="Estrato">
+            </div>
+            <div class="col-6 col-sm-7">
+              <input type="number" class="form-control" id="habitaciones" placeholder="Habitaciones">
+            </div>
+            <div class="col-6 col-sm-6">
+              <input type="number" class="form-control" id="banos" placeholder="# Baños">
+            </div>
+            <div class="col-6 col-sm-6">
+              <select name="barrio" id="garaje" class="form-control" >
+                <option value="">Garaje</option>
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="col-12 col-sm-12">
+              <select name="tipo_inmueble" id="tipo_inmueble" class="form-control" >
+                <option value="">Tipo inmueble</option>
+                <option value="Aparatamento">Aparatamento</option>
+                <option value="Casa">Casa</option>
+                <option value="Lote">Lote</option>
+              </select>
+            </div>
+            <div class="col-12 col-sm-12">
+              <select name="tipo_negocio" id="tipo_negocio" class="form-control" >
+                <option value="">Tipo negocio</option>
+                <option value="Arriendo">Arriendo</option>
+                <option value="Venta">Venta</option>
+                <option value="Permuta">Permuta</option>
+              </select>
+            </div>
+            <div class="col-12 col-sm-12">
+              <select name="antiguedad" id="antiguedad" class="form-control" >
+                <option value="">Antiguedad</option>
+                <option value="Nuevo">Nuevo</option>
+                <option value="Usado">Usado</option>
+              </select>
+            </div>
+            <div class="col-12 col-sm-12">
+              <input type="text" class="form-control" id="mts" placeholder="Mts Cuadrados">
+            </div>
+            <div class="col-12 col-sm-12">
+              <select name="estas" id="estas" class="form-control" >
+                <option value="">Estas en el inmueble</option>
+                <option value="1">Si</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+            <div id="info"><p style="padding-left: 0.5em">Arrastre el marcador donde se encuentre el inmueble</p></div>
+            <div class="col-12 col-sm-12">
+              <input type="hidden" id="x_lat" >
+              <input type="hidden" id="x_lon" >
+            </div>
+            <div class="col-12 col-sm-12">
+              <input type="hidden" id="y_lat" >
+              <input type="hidden" id="y_lon" >
+            </div>
+          </div>
         </div>
-      </form>     
+      </form>  
+      <div id="map"></div>   
 
     </div>
 
@@ -58,15 +142,11 @@
     <script src="./js/crear_in.js"></script>
     <script src="./js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcuL57fE7kGODVpu6TsoFRFR2kaIr5LWw&callback=initMap"
+    async defer></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bind.polyfill.js"></script>
     <script src="./js/Tocca.js"></script>
-    <script>
-      //swiperight,swipeleft
-      $("html").on('swiperight',function (e,data){
-        location.href ="misinmuebles.html";
-      });
-    </script>
   </body>
 </html>
