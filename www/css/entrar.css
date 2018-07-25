@@ -9,18 +9,18 @@ body
 
 .icono
 {
-	margin-top: 35%;
+	margin-top: 30%;
 	text-align: center;
 }
 
 .icono img
 {
-	width: 25%;
+	width: 20%;
 }
 
 .form
 {
-	padding: 1.5em;
+	padding: 1.1em;
 }
 
 .botones a
@@ -68,10 +68,108 @@ input
 {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	margin: 10px;
+	margin: 20px;
 }
 
 #error_msg
 {
 	display: none;
+}
+
+#fblogin {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+	background-color: #405d9b;
+    background: -webkit-linear-gradient(#405d9b,#405d9b);
+    background: linear-gradient(#405d9b,#405d9b);
+    border-top: 1px solid rgb(49, 74, 123);
+    border-right: 1px solid rgb(42, 64, 105);
+    border-bottom: 1px solid rgb(42, 64, 105);
+    border-left: 1px solid rgb(42, 64, 105);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font: normal normal 16px/normal 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    outline: rgb(68, 68, 68) none 0px;
+    overflow: hidden;
+    padding: 10px 18px;
+}
+
+#fbname {
+    position: absolute;
+}
+
+#fbtext {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 17px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    align-self: flex-start;
+    border: 0px none rgb(255, 255, 255);
+	font-family: 'Montserrat', sans-serif;
+    margin: -3px 0px 0px 10px;
+    outline: rgb(255, 255, 255) none 0px;
+}
+
+#gpluslogin {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+background-color: #DD4B39;
+    background: -webkit-linear-gradient(#DD4B39,#D14836);
+    background: linear-gradient(#DD4B39,#D14836);
+    border-top: 1px solid rgb(230, 88, 88);
+    border-right: 1px solid rgb(227, 66, 66);
+    border-bottom: 1px solid rgb(227, 66, 66);
+    border-left: 1px solid rgb(227, 66, 66);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font: normal normal 16px/normal 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    outline: rgb(68, 68, 68) none 0px;
+    overflow: hidden;
+    padding: 10px 18px;
+}
+
+#gpname {
+    position: absolute;
+}
+
+#gptext {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 17px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    align-self: flex-start;
+    border: 0px none rgb(255, 255, 255);
+	font-family: 'Montserrat', sans-serif;
+    margin: -3px 0px 0px 10px;
+    outline: rgb(255, 255, 255) none 0px;
 }
