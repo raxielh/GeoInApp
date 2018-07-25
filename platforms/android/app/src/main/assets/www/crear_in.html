@@ -6,21 +6,11 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/crear_in.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
-    <style>
-      #map {
-        height: 100%;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
     <title>GeoIn!</title>
   </head>
-  <body>
+  <body id="gesuredZone">
     <header>
       <div class="menu_bar">
         <div class="bt-menu">
@@ -30,8 +20,8 @@
             </div>
             <div class="col-3 col-sm-3" style="padding-top: 5px">
               <center>
-                <a href="#">
-                  <i class="material-icons" style="font-size: 37px;">account_circle</i>
+                <a href="#" id="save_in">
+                  <i class="material-icons" style="font-size: 37px;">save</i>
                 </a>
               </center>
             </div>
@@ -51,18 +41,32 @@
         </ul>
       </nav>
     </header>
-    <div id="map"></div>
+    
+    <div class="container" style="padding-top:100px">
+
+      <form action="">
+        <div class="form-group">
+          <input type="text" class="form-control" id="dire" placeholder="Dirección">
+        </div>
+      </form>     
+
+    </div>
+
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="./js/firebase.js"></script>
-    <script src="./js/home.js"></script>
+    <script src="./js/crear_in.js"></script>
     <script src="./js/app.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcuL57fE7kGODVpu6TsoFRFR2kaIr5LWw&callback=initMap"
-    async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bind.polyfill.js"></script>
     <script src="./js/Tocca.js"></script>
+    <script>
+      //swiperight,swipeleft
+      $("html").on('swiperight',function (e,data){
+        location.href ="misinmuebles.html";
+      });
+    </script>
   </body>
 </html>

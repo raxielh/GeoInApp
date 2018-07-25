@@ -1,21 +1,3 @@
-function salir(){
-  $.confirm({
-      title: 'Confirmar!',
-      content: 'Estas seguro de cerrar sesion!',
-      buttons: {
-          confirmar: function () {
-            firebase.auth().signOut().then(function(){
-                location.href ="entrar.html";
-            }).catch(function(error){
-
-            });
-          },
-          cancelar: function () {
-          }
-      }
-  });
-}
-
 var map, infoWindow;
 function initMap()
 {
