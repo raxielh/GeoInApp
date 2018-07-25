@@ -1,0 +1,47 @@
+body
+{ 
+	background: url(../img/index.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.icono
+{
+	margin-top: 50%;
+	text-align: center;
+}
+
+.icono img
+{
+	width: 40%;
+}
+
+.botones
+{
+	padding: 3em;
+}
+
+.botones a
+{
+	width: 100%;
+}
+
+.entrar
+{
+	color: #fff;
+    border: 2px solid;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.registrarse
+{
+	margin-top: 1em;
+	color: #b32e01;
+	border: 0px solid;
+    border-radius: 20px;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}

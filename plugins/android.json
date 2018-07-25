@@ -15,6 +15,9 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.florecer.xplorate.estudiante"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.teseeo.geoin.cliente"
     }
   },
   "dependent_plugins": {}

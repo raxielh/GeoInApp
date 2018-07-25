@@ -1,0 +1,77 @@
+body
+{ 
+	background: url(../img/entrar.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.icono
+{
+	margin-top: 40%;
+	text-align: center;
+}
+
+.icono img
+{
+	width: 25%;
+}
+
+.form
+{
+	padding: 1.5em;
+}
+
+.botones a
+{
+	width: 100%;
+}
+
+.entrar
+{
+	color: #fff;
+    border: 2px solid;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ingresar
+{
+	color: #fff;
+	border: 0px solid;
+    border-radius: 20px;
+    background-color: #00afef;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin-top: 1em;
+}
+
+input
+{
+	background-color: #fff0 !important;
+}
+
+.form-control
+{
+	border: 0px solid #ced4da;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.form-control:focus
+{
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0) !important;
+    border-bottom: 1px solid #49505766 !important;
+}
+
+.text
+{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin: 10px;
+}
+
+#error_msg
+{
+	display: none;
+}
