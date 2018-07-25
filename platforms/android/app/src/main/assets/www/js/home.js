@@ -1,19 +1,18 @@
-$(function()
-{
-   
-  $("#map").css("height", screen.height-80);
-
-});
-
-//alert(screen.width + " x " + screen.height) 
-
-
 function salir(){
+  $.confirm({
+      title: 'Confirmar!',
+      content: 'Estas seguro de cerrar sesion!',
+      buttons: {
+          confirmar: function () {
+            firebase.auth().signOut().then(function(){
+                location.href ="entrar.html";
+            }).catch(function(error){
 
-  firebase.auth().signOut().then(function(){
-      location.href ="entrar.html";
-  }).catch(function(error){
-
+            });
+          },
+          cancelar: function () {
+          }
+      }
   });
 }
 

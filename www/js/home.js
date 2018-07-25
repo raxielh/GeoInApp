@@ -1,17 +1,7 @@
-$(function()
-{
-   
-  $("#map").css("height", screen.height-80);
-
-});
-
-//alert(screen.width + " x " + screen.height) 
-
-
 function salir(){
   $.confirm({
-      title: 'Confirm!',
-      content: 'Simple confirm!',
+      title: 'Confirmar!',
+      content: 'Estas seguro de cerrar sesion!',
       buttons: {
           confirmar: function () {
             firebase.auth().signOut().then(function(){

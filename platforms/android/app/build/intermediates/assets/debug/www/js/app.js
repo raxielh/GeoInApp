@@ -1,10 +1,11 @@
 $(function()
 {
+  $("body").fadeIn(2000);
  var contador = 1;
  
-  $('.menu_bar').click(function(){
+  $('.menu').click(function(){
     $('nav').toggle();
- 
+
     if(contador == 1){
       $('nav').animate({
         left: '0',
@@ -20,5 +21,8 @@ $(function()
     }
  
   });
+
+
+ 
 });
 
