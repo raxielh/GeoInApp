@@ -63,8 +63,10 @@ function cargar(){
                     '</p>');
 
                   $('#inf').show();
+                  $("#estado").text(snapshot.val().estado);
                   
-                  $("#tel").attr("href",'tel:'+telefono)
+                  $("#tel").attr("href",'tel:'+telefono);
+                  $("#ruta").attr("href",'ruta.html?lat='+snapshot.val().lat+'&lon='+snapshot.val().lon);
 
                 });
 

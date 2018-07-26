@@ -61,7 +61,7 @@ $(function()
                         lon: lon,
                         descripcion:$('#descripcion').val(),
                         precio:$('#precio').val(),
-                        estado:'Activo';
+                        estado:'Disponible',
                       }).then(function() {
                           setTimeout(function(){ location.href ="misinmuebles.html" }, 1000);
                       });

@@ -38,7 +38,7 @@ function initMap(marcadores)
              marcadores[i][2]+'</strong><br><br>$ '+
              marcadores[i][3]+'<br><br>'+
              marcadores[i][4]+'<br><br><br>'+
-             '<a href="verinmueble.html?id='+marcadores[i][5]+'" style="background: #ff4000;padding: 10px;border-radius: 10px;">Ver</a><br><br><br>'
+             '<a href="verinmueble2.html?id='+marcadores[i][5]+'" style="background: #ff4000;padding: 10px;border-radius: 10px;">Ver</a><br><br><br>'
             +'</div>');
               infowindow.open(map, marker);
             }
