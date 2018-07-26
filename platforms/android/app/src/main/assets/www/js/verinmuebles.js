@@ -6,6 +6,7 @@ $(function()
 function cargar(){
   $('#fondo_load').show();
   $('#load').show();
+  $('#inf').hide();
   //console.log(getParameterByName('id'));
 
   //$('#fondo_load').show();
@@ -50,6 +51,7 @@ function cargar(){
                   $('#descripcion').html('<h5>Descripcion</h5><p>'+snapshot.val().descripcion+'</p>');
                   $('#precio').html('$ '+snapshot.val().precio);
                   $('#especificaciones').html('<h5>Especificaciones</h5><p>'+
+                    '<strong>Dirección</strong> '+snapshot.val().direccion+'<br>'+
                     '<strong>Tipo inmueble</strong> '+snapshot.val().tipo_inmueble+'<br>'+
                     '<strong>Tipo negocio</strong> '+snapshot.val().tipo_negocio+'<br>'+
                     '<strong>Metros Cuadrados</strong> '+snapshot.val().mts+'<br>'+
@@ -60,7 +62,7 @@ function cargar(){
                     '<strong>Antiguedad</strong> '+snapshot.val().antiguedad+'<br>'+
                     '</p>');
 
-                  console.log(telefono);
+                  $('#inf').show();
                   
                   $("#tel").attr("href",'tel:'+telefono)
 

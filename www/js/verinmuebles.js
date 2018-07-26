@@ -6,6 +6,7 @@ $(function()
 function cargar(){
   $('#fondo_load').show();
   $('#load').show();
+  $('#inf').hide();
   //console.log(getParameterByName('id'));
 
   //$('#fondo_load').show();
@@ -61,7 +62,7 @@ function cargar(){
                     '<strong>Antiguedad</strong> '+snapshot.val().antiguedad+'<br>'+
                     '</p>');
 
-                  console.log(telefono);
+                  $('#inf').show();
                   
                   $("#tel").attr("href",'tel:'+telefono)
 

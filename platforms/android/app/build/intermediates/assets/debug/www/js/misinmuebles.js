@@ -37,7 +37,7 @@ function cargar(){
               //console.log(Object.keys(inmuebles)[x]);
             
 
-              if(inmuebles[key2].tipo_inmueble=='Aparatamento'){
+              if(inmuebles[key2].tipo_inmueble=='Apartamento'){
                 var icon='<img src="img/i1.png" width=30px; style="padding-right: 10px;" />';
               }
               if(inmuebles[key2].tipo_inmueble=='Casa'){

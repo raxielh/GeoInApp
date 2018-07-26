@@ -12,14 +12,38 @@ function initMap(marcadores)
     zoom:14 
   });
 
-
+ var infowindow = new google.maps.InfoWindow();
         for (i = 0; i < marcadores.length; i++) {
+
+          if(marcadores[i][4]=='Apartamento'){
+            var ico='./img/i11.png';
+          }
+          if(marcadores[i][4]=='Casa'){
+            var ico='./img/i22.png';
+          }
+          if(marcadores[i][4]=='Lote'){
+            var ico='./img/i33.png';
+          }
+
+
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(marcadores[i][0], marcadores[i][1]),
-             icon: 'https://www.subeimagenes.com/img/geo-1915530.png',
+             icon:ico,
             map: map
           });
-          
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent('<div id="content" style="text-align: center;"><br><strong>'+
+             marcadores[i][2]+'</strong><br><br>$ '+
+             marcadores[i][3]+'<br><br>'+
+             marcadores[i][4]+'<br><br><br>'+
+             '<a href="verinmueble.html?id='+marcadores[i][5]+'" style="background: #ff4000;padding: 10px;border-radius: 10px;">Ver</a><br><br><br>'
+            +'</div>');
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+
         }
 /*  
 
@@ -69,7 +93,7 @@ function carga(){
                 var ff=firebase.database().ref('/Clientes/'+key+'/'+key2+'/inmueble/'+key3).once('value').then(function(snapshot) {
                   //console.log(snapshot.val().lat+' '+snapshot.val().lon);
                   //features=[{position: new google.maps.LatLng(snapshot.val().lat,snapshot.val().lon
-                  marcadores.push([snapshot.val().lat,snapshot.val().lon]);
+                  marcadores.push([snapshot.val().lat,snapshot.val().lon,snapshot.val().direccion,snapshot.val().precio,snapshot.val().tipo_inmueble,key3]);
                   i=i+1;
                   //console.log(marcadores.length);
                   initMap(marcadores);
