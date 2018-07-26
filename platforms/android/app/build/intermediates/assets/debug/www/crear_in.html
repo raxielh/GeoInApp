@@ -15,6 +15,10 @@
       }
       #map {
         height: 200px;
+        display: none;
+      }
+      #info {
+        display: none;
       }
       html, body {
         height: 100%;
@@ -25,6 +29,9 @@
     </style>
   </head>
   <body id="gesuredZone">
+    <div id="fondo_load">
+      <div id="load"><img src="./img/load.gif" alt="" width="100%"></div>
+    </div>
     <header>
       <div class="menu_bar">
         <div class="bt-menu">
@@ -86,7 +93,7 @@
             <div class="col-12 col-sm-12">
               <select name="tipo_inmueble" id="tipo_inmueble" class="form-control" >
                 <option value="">Tipo inmueble</option>
-                <option value="Aparatamento">Aparatamento</option>
+                <option value="Aparatamento">Apartamento</option>
                 <option value="Casa">Casa</option>
                 <option value="Lote">Lote</option>
               </select>
@@ -106,16 +113,23 @@
                 <option value="Usado">Usado</option>
               </select>
             </div>
-            <div class="col-5 col-sm-5">
+            <div class="col-12 col-sm-12">
               <input type="text" class="form-control" id="mts" placeholder="Mts Cuadrados">
             </div>
-            <div class="col-7 col-sm-7">
+            <div class="col-12 col-sm-12">
+              <input type="number" class="form-control" id="precio" placeholder="Precio">
+            </div>
+            <div class="col-12 col-sm-12">
+              <textarea class="form-control" id="descripcion" placeholder="Descripcion"></textarea>
+            </div>
+            <div class="col-12 col-sm-12">
               <select name="estas" id="estas" class="form-control" >
                 <option value="">Estas en el inmueble</option>
                 <option value="1">Si</option>
                 <option value="0">No</option>
               </select>
             </div>
+            <div id="info"><p style="padding-left: 0.5em">Arrastre el marcador donde se encuentre el inmueble</p></div>
             <div class="col-12 col-sm-12">
               <input type="hidden" id="x_lat" >
               <input type="hidden" id="x_lon" >
@@ -143,5 +157,11 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/bind.polyfill.js"></script>
     <script src="./js/Tocca.js"></script>
+    <script>
+      //swiperight,swipeleft
+      $("html").on('swiperight',function (e,data){
+        location.href ="misinmuebles.html";
+      });
+    </script>
   </body>
 </html>

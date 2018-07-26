@@ -1,7 +1,6 @@
 $(function()
 {
 
-
   $( "#estas" ).change(function() {
     if($( "#estas" ).val()==0){
       $( "#map" ).show();
@@ -14,10 +13,8 @@ $(function()
 
   $('#save_in').click(function(){
 
-    $('#fondo_load').show();
-    $('#load').show();
 
-    if($('#dire').val()&&$('#barrio').val()&&$('#estrato').val()&&$('#mts').val()&&$('#tipo_inmueble').val()&&$('#tipo_negocio').val()&&$('#antiguedad').val()&&$('#estas').val()){
+    if($('#dire').val()&&$('#barrio').val()&&$('#estrato').val()&&$('#mts').val()&&$('#tipo_inmueble').val()&&$('#tipo_negocio').val()&&$('#antiguedad').val()&&$('#estas').val()&&$('#precio').val()){
     
 
     
@@ -26,6 +23,9 @@ $(function()
         content: 'Estas seguro de crear este inmueble?',
         buttons: {
             si: function () {
+                  $('#fondo_load').show();
+                $('#load').show();
+
 
               var user = firebase.auth().currentUser;
               //console.log(user.uid);
@@ -33,7 +33,7 @@ $(function()
               return firebase.database().ref('/Clientes/' + user.uid).once('value').then(function(snapshot) {                 
                 obj=snapshot.val();                  
                 var o=Object.keys(obj)[0];
-                console.log(o);
+                //console.log(obj);
 
                 var database = firebase.database();
                 var referencia = database.ref('Clientes/'+user.uid+'/'+o+'/'+'inmueble');  
@@ -45,6 +45,7 @@ $(function()
                   var lat=$('#x_lat').val();
                   var lon=$('#x_lon').val();
                 }
+                
                       var add =  referencia.push({
                         direccion: $('#dire').val(),
                         barrio: $('#barrio').val(),
@@ -58,9 +59,12 @@ $(function()
                         antiguedad: $('#antiguedad').val(),
                         lat: lat,
                         lon: lon,
+                        descripcion:$('#descripcion').val(),
+                        precio:$('#precio').val(),
                       }).then(function() {
                           setTimeout(function(){ location.href ="misinmuebles.html" }, 1000);
                       });
+                
 
               });
             },
@@ -102,7 +106,7 @@ var map;
   function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 8.756917, lng: -75.879524},
-    zoom:18 
+    zoom:14  
   });
    
    var marker=new google.maps.Marker({
